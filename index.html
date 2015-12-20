@@ -1,0 +1,48 @@
+<html>
+
+  <head>
+    <title>Angular2 ClassRoom</title>
+    <base href="/">
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <style type="text/css">
+      body {
+        background: url('./images/bkg.jpg');  
+      } 
+      #container {
+        width: 1024px;
+        margin: 0 auto;
+      }
+    </style>
+
+    <!-- 1. Load libraries -->
+    <script src="node_modules/es6-shim/es6-shim.js"></script>
+    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+    <script src="node_modules/angular2/bundles/router.dev.js"></script>
+
+    <!-- 2. Configure SystemJS -->
+    <script>
+      System.config({
+        packages: {        
+          app: {
+            format: 'register',
+            defaultExtension: 'js'
+          }
+        }
+      });
+      System.import('app/boot')
+            .then(null, console.error.bind(console));
+    </script>
+
+  </head>
+
+  <!-- 3. Display the application -->
+  <body>
+    <div id="container">
+      <my-app>加载中...</my-app>
+    </div>
+  </body>
+
+</html>
