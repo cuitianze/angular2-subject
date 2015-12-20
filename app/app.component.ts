@@ -2,6 +2,9 @@ import {Component} from 'angular2/core';
 import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
 // import {Hero} from './hero';
 import {HomeComponent} from './home.component';
+import {VideoComponent} from './video.component';
+import {LessonComponent} from './lesson.component';
+import {StudyComponent} from './study.component';
 
 
 
@@ -21,10 +24,10 @@ import {HomeComponent} from './home.component';
     </div>
     <div id="menu-wrap">
       <ul id="menu">
-        <li>首页<img src="./images/menu-1.png"></li>
-        <li>视频<img src="./images/menu-2.png"></li>
-        <li>课程<img src="./images/menu-3.png"></li>
-        <li>留学<img src="./images/menu-4.png"></li>
+        <li [routerLink]="['Home']">首页<img src="./images/menu-1.png"></li>
+        <li [routerLink]="['Video']">视频<img src="./images/menu-2.png"></li>
+        <li [routerLink]="['Lesson']">课程<img src="./images/menu-3.png"></li>
+        <li [routerLink]="['Study']">留学<img src="./images/menu-4.png"></li>
       </ul>
     </div>
     <router-outlet></router-outlet>
@@ -99,6 +102,7 @@ import {HomeComponent} from './home.component';
       line-height: 65px;
       text-align: center;
       background: url('./images/menu.png');
+      cursor: pointer;
     }
     #menu li img {
       width: 38px;
@@ -117,6 +121,18 @@ import {HomeComponent} from './home.component';
      name: 'Home',
      component: HomeComponent,
      useAsDefault: true
+  },{
+    path: '/video',
+    name: 'Video',
+    component: VideoComponent
+  },{
+    path: '/lesson',
+    name: 'Lesson',
+    component: LessonComponent
+  },{
+    path: '/study',
+    name: 'Study',
+    component: StudyComponent
   }
 ])
 
