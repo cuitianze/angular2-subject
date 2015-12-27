@@ -19,7 +19,7 @@ import {StudyComponent} from './study.component';
       </div>
       <img class="title-girl" src="./images/title-girl.png">
       <div class="board">
-        
+
       </div>
     </div>
     <div id="menu-wrap">
@@ -34,7 +34,7 @@ import {StudyComponent} from './study.component';
   `,
   styles:[`
     #header {
-      position: relative;  
+      position: relative;
     }
     #header h1 {
       width: 718px;
@@ -101,6 +101,7 @@ import {StudyComponent} from './study.component';
       position: relative;
       line-height: 65px;
       text-align: center;
+      font-size: 24px;
       background: url('./images/menu.png');
       cursor: pointer;
     }

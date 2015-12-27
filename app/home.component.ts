@@ -7,14 +7,14 @@ import {Hero} from './hero';
     <div id="content">
       <div class="left">
         <div class="slide">
-          
+
         </div>
         <div class="aboutus">
           <h2 class="title">关于我们</h2>
         </div>
       </div>
       <div class="right">
-        
+
       </div>
     </div>
     <div id="teachers-wrap">
@@ -64,6 +64,7 @@ import {Hero} from './hero';
       height: 72px;
       line-height: 72px;
       text-align: center;
+      font-size: 24px;
       background: url('./images/aboutus-title.png');
     }
     #content .right {
@@ -90,6 +91,7 @@ import {Hero} from './hero';
       padding: 30px 32px;
       line-height: 26px;
       text-align: center;
+      font-size: 23px;
       background: url('./images/teacher-title.png');
     }
     #teachers-wrap .teachers {
@@ -128,6 +130,7 @@ import {Hero} from './hero';
     #comment .title {
       width: 255px;
       height: 168px;
+      font-size: 21px;
       background: url('./images/comment-title.png') no-repeat;
       background-size: contain;
       position: relative;

@@ -4,138 +4,60 @@ import {Hero} from './hero';
 @Component({
   // selector: 'my-hero-detail',
   template: `
-    <div id="content">
-      <div class="left">
-        <div class="slide">
-          
-        </div>
-        <div class="aboutus">
-          <h2 class="title">关于我们</h2>
+    <div id="lesson">
+      <div class="title-wrap">
+        <h2 class="title">留学</h2>
+        <img class="video-pop" src="./images/video-pop.png" />
+        <div class="video-tip">
+          <p>鳄鱼日语系列节目！记得带爆米花哟！嗷！</p>
         </div>
       </div>
-      <div class="right">
-        
+      <div class="content">
+        <ul>
+          <li *ngFor="#video of videos"></li>
+        </ul>
       </div>
-    </div>
-    <div id="teachers-wrap">
-      <h2 class="title">教师<br>介绍</h2>
-      <img class="teacher-1" src="./images/teacher-1.png">
-      <img class="teacher-2" src="./images/teacher-2.png">
-      <img class="teachers" src="./images/teachers.png">
-    </div>
-    <div id="comment">
-      <h2 class="title"><span>留言</span></h2>
     </div>
   `,
   styles: [`
-    /* 首页主体 */
-    #content {
-      margin-top: 30px;
+    #lesson {
+      padding: 10px 110px;
     }
-    #content:after {
-      display: block;
-      content: '';
-      clear: both;
+    #lesson .title-wrap {
+      position: relative;
+      height: 222px;
+      margin-top: 50px;
+      padding: 1px;
     }
-    /* 左侧 */
-    #content .left {
+    #lesson .title-wrap .title {
       float: left;
-      width: 454px;
-      margin-left: 116px;
-    }
-    /* 轮播图 */
-    #content .left .slide {
-      width: 452px;
-      height: 226px;
-      background: url('./images/slide-bg.png');
-    }
-    #content .left .aboutus{
-      width: 422px; /*452-15*2*/
-      height: 202px; /*228-12*2*/
-      margin-top: 18px;
-      padding: 12px 15px;
-      border-radius: 30px;
-      background: #dacc89;
-      opacity: 0.7;
-      /*background: url('./images/aboutus-bg.png');*/
-    }
-    #content .left .aboutus .title{
-      width: 136px;
-      height: 72px;
-      line-height: 72px;
+      width: 318px;
+      height: 196px;
+      margin-right: 22px;
+      line-height: 196px;
       text-align: center;
-      background: url('./images/aboutus-title.png');
-    }
-    #content .right {
-      float: right;
-      width: 338px;
-      height: 472px;
-      margin-right: 112px;
-      border-radius: 30px;
-      background: #85acb8;
-      opacity: 0.7;
-    }
-    /* 教师介绍 */
-    #teachers-wrap {
-      position: relative;
-      margin-left: 116px;
-      height: 300px;
-    }
-    #teachers-wrap .title{
-      position: absolute;
-      top: 10px;
-      left: -20px;
-      width: 46px;
-      height: 46px;
-      padding: 30px 32px;
-      line-height: 26px;
-      text-align: center;
-      background: url('./images/teacher-title.png');
-    }
-    #teachers-wrap .teachers {
-      position: absolute;
-      left: 54px;
-      bottom: 0;
-      width: 804px;
-      height: 214px;
-    }
-    #teachers-wrap .teacher-1 {
-      position: absolute;
-      bottom: 0;
-      left: -30px;
-      width: 134px;
-      height: 152px;
-      z-index: 1;
-    }
-      #teachers-wrap .teacher-2 {
-      position: absolute;
-      top: 60px;
-      left: 82px;
-      width: 126px;
-      height: 86px;
-      z-index: 1;
-    }
-    /* 留言 */
-    #comment {
-      width: 748px; /*808-30*2*/
-      height: 558px; /*618-30*2*/
-      margin: 30px auto;
-      padding: 10px;
-      border-radius: 50px;
-      background: #e0c5a4;
-      opacity: 0.7;
-    }
-    #comment .title {
-      width: 255px;
-      height: 168px;
-      background: url('./images/comment-title.png') no-repeat;
+      background: url('./images/video-cloud.png');
       background-size: contain;
-      position: relative;
     }
-    #comment .title span {
+    #lesson .title-wrap .video-pop {
+      float: left;
+      width: 216px;
+      height: 222px;
+    }
+    #lesson .title-wrap .video-tip {
       position: absolute;
-      top: 76px;
-      left: 22px;
+      top: -30px;
+      right: -50px;
+      width: 284px;
+      height: 170px;
+      background: url('./images/video-tip.gif');
+      background-size: contain;
+    }
+    #lesson .title-wrap .video-tip p {
+      margin-top: 30px;
+      margin-left: 30px;
+      width: 220px;
+      height: 80px;
     }
   `
   ]

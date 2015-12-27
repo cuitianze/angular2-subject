@@ -29,14 +29,16 @@ import {Hero} from './hero';
     height: 222px;
     margin-top: 50px;
     padding: 1px;
-  } 
+  }
   #video .title-wrap .title {
     float: left;
     width: 318px;
     height: 196px;
     margin-right: 22px;
-    line-height: 196px;
+    line-height: 226px;
     text-align: center;
+    font-size: 60px;
+    color: #eafca4;
     background: url('./images/video-cloud.png');
     background-size: contain;
   }
@@ -56,9 +58,10 @@ import {Hero} from './hero';
   }
   #video .title-wrap .video-tip p {
     margin-top: 30px;
-    margin-left: 30px;
-    width: 220px;
+    margin-left: 66px;
+    width: 150px;
     height: 80px;
+    line-height: 1.5em;
   }
   #video .content {
   }
