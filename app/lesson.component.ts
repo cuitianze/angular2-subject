@@ -58,8 +58,6 @@ content
       height: 158px;
       border-radius: 30px;
       background: #82bcdc;
-    }
-    #lesson .title-wrap .lesson-tip {
       padding: 30px;
       line-height: 1.5em;
       font-size: 32px;
