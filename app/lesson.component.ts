@@ -19,7 +19,7 @@ import {Hero} from './hero';
           </h2>
         </div>
         <div class="lesson-content">
-content
+          <img src=""/>
         </div>
       </div>
 
