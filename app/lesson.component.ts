@@ -55,11 +55,10 @@ import {Hero} from './hero';
       top: -26px;
       right: -50px;
       width: 434px;
-      height: 158px;
       border-radius: 30px;
       background: #82bcdc;
       padding: 30px;
-      line-height: 1.5em;
+      line-height: 1.2em;
       font-size: 32px;
     }
 
