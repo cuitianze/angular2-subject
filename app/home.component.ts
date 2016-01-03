@@ -97,10 +97,10 @@ import {Hero} from './hero';
       background: #85acb8;
       opacity: 0.7;
     }
-    #content. right a {
+    #content .right a {
       position: absolute;
+      top: 8px;
       right: 10px;
-      z-index: 10;
     }
     #content .right img {
       margin-top: 10px;
