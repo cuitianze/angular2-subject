@@ -4,6 +4,7 @@
     <title>Angular2 ClassRoom</title>
     <base href="/">
     <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
     <style type="text/css">
       body {
         font-family: 'Wawati SC';
@@ -31,7 +32,13 @@
           app: {
             format: 'register',
             defaultExtension: 'js'
+          },
+          "node_modules/ng2-bootstrap": {
+            "defaultExtension": 'js'
           }
+        },
+        paths: {
+          "ng2-bootstrap/ng2-bootstrap": "node_modules/ng2-bootstrap/ng2-bootstrap"
         }
       });
       System.import('app/boot')

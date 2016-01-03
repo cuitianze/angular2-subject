@@ -1,4 +1,7 @@
 import {Component} from 'angular2/core';
+import { CORE_DIRECTIVES, FORM_DIRECTIVES } from 'angular2/common';
+import { CAROUSEL_DIRECTIVES } from 'ng2-bootstrap/ng2-bootstrap';
+
 import {Hero} from './hero';
 
 @Component({
@@ -6,8 +9,14 @@ import {Hero} from './hero';
   template: `
     <div id="content">
       <div class="left">
-        <div class="slide">
-
+        <div class="slide row">
+        <div class="col-md-6">
+          <carousel [interval]="intervalTime" [noWrap]="noWrapSlides">
+            <slide *ngFor="#slidez of slides; #index=index" [active]="slidez.active">
+              <img [src]="slidez.image" style="margin: auto"/>
+            </slide>
+          </carousel>
+        </div>
         </div>
         <div class="aboutus">
           <h2 class="title">关于我们</h2>
@@ -140,10 +149,28 @@ import {Hero} from './hero';
       top: 76px;
       left: 22px;
     }
-  `
-  ]
+  `],
+  directives: [CAROUSEL_DIRECTIVES, CORE_DIRECTIVES]
 })
 
 export class HomeComponent {
   // public hero: Hero;
+  private intervalTime:number = 5000;
+  private noWrapSlides:boolean = false;
+  private slides:Array<any> = [];
+
+  constructor() {
+    for (let i = 0; i < 4; i++) {
+      this.addSlide();
+    }
+  }
+  private addSlide() {
+    let newWidth = 600 + this.slides.length + 1;
+    this.slides.push({
+      image: `//placekitten.com/${newWidth}/300`,
+      text: `${['More', 'Extra', 'Lots of', 'Surplus'][this.slides.length % 4]}
+      ${['Cats', 'Kittys', 'Felines', 'Cutes'][this.slides.length % 4]}`
+    });
+  }
+
 };

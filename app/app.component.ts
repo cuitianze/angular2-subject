@@ -7,7 +7,6 @@ import {LessonComponent} from './lesson.component';
 import {StudyComponent} from './study.component';
 
 
-
 @Component({
   selector: 'my-app',
   template: `
@@ -138,5 +137,4 @@ import {StudyComponent} from './study.component';
 ])
 
 export class AppComponent {
-
 }
