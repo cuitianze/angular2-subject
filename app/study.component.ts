@@ -19,9 +19,9 @@ import {Hero} from './hero';
         </div>
         <div class="school-menu">
           <img src="./images/study-menu.png"/>
-          <a [routerLink]="['Home']"></a>
-          <a [routerLink]="['Home']"></a>
-          <a [routerLink]="['Home']"></a>
+          <a class="first" [routerLink]="['Home']"></a>
+          <a class="second" [routerLink]="['Home']"></a>
+          <a class="third" [routerLink]="['Home']"></a>
         </div>
         <div class="company-info">
           <img src="./images/company-info.png"/>
@@ -97,23 +97,21 @@ import {Hero} from './hero';
       height: 695px;
     }
     #study .school-menu a {
-      display: inline-block;
+      display: block;
       width: 222px;
       height: 130px;
       position: absolute;
       right: 96px;
       cursor: pointer;
-      background: red;
-      opacity: 0.5;
     }
-    #study .school-menu a:nth-child(0) {
-      top: 93px;
+    #study .school-menu a.first {
+      top: 95px;
     }
-    #study .school-menu a:nth-child(1) {
-      top: 193px;
+    #study .school-menu a.second {
+      top: 320px;
     }
-    #study .school-menu a:nth-child(2) {
-      top: 293px;
+    #study .school-menu a.third {
+      top: 550px;
     }
     #study .company-info {
       margin-left: -30px;
