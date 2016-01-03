@@ -1,5 +1,6 @@
 import {Component} from 'angular2/core';
 import { CORE_DIRECTIVES, FORM_DIRECTIVES } from 'angular2/common';
+import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
 import { CAROUSEL_DIRECTIVES } from 'ng2-bootstrap/ng2-bootstrap';
 
 import {Hero} from './hero';
@@ -9,21 +10,20 @@ import {Hero} from './hero';
   template: `
     <div id="content">
       <div class="left">
-        <div class="slide row">
-        <div class="col-md-6">
+        <div class="slider">
           <carousel [interval]="intervalTime" [noWrap]="noWrapSlides">
             <slide *ngFor="#slidez of slides; #index=index" [active]="slidez.active">
               <img [src]="slidez.image" style="margin: auto"/>
             </slide>
           </carousel>
         </div>
-        </div>
         <div class="aboutus">
           <h2 class="title">关于我们</h2>
         </div>
       </div>
       <div class="right">
-
+        <a [routerLink]="['Lesson']">查看更多》</a>
+        <img src="./images/home-lesson.png"/>
       </div>
     </div>
     <div id="teachers-wrap">
@@ -53,13 +53,24 @@ import {Hero} from './hero';
       margin-left: 116px;
     }
     /* 轮播图 */
-    #content .left .slide {
+    #content .left .slider {
       width: 452px;
       height: 226px;
+      padding-top: 9px;
+      padding-left: 13px;
+      padding-right: 6px;
       background: url('./images/slide-bg.png');
     }
+    #content .left .slider img {
+      width: 433px;
+      height: 210px;
+      border-radius: 30px;
+    }
+    #content .left .slider .carousel .carousel-control {
+      background: none !important;
+    }
     #content .left .aboutus{
-      width: 422px; /*452-15*2*/
+      width: 450px; /*452-15*2*/
       height: 202px; /*228-12*2*/
       margin-top: 18px;
       padding: 12px 15px;
@@ -77,6 +88,7 @@ import {Hero} from './hero';
       background: url('./images/aboutus-title.png');
     }
     #content .right {
+      position: relative;
       float: right;
       width: 338px;
       height: 472px;
@@ -84,6 +96,17 @@ import {Hero} from './hero';
       border-radius: 30px;
       background: #85acb8;
       opacity: 0.7;
+    }
+    #content. right a {
+      position: absolute;
+      right: 10px;
+      z-index: 10;
+    }
+    #content .right img {
+      margin-top: 10px;
+      margin-left: 10px;
+      width: 320px;
+      height: 450px;
     }
     /* 教师介绍 */
     #teachers-wrap {
@@ -95,8 +118,8 @@ import {Hero} from './hero';
       position: absolute;
       top: 10px;
       left: -20px;
-      width: 46px;
-      height: 46px;
+      // width: 46px;
+      // height: 46px;
       padding: 30px 32px;
       line-height: 26px;
       text-align: center;
@@ -118,7 +141,7 @@ import {Hero} from './hero';
       height: 152px;
       z-index: 1;
     }
-      #teachers-wrap .teacher-2 {
+    #teachers-wrap .teacher-2 {
       position: absolute;
       top: 60px;
       left: 82px;
@@ -150,7 +173,7 @@ import {Hero} from './hero';
       left: 22px;
     }
   `],
-  directives: [CAROUSEL_DIRECTIVES, CORE_DIRECTIVES]
+  directives: [ROUTER_DIRECTIVES, CAROUSEL_DIRECTIVES, CORE_DIRECTIVES]
 })
 
 export class HomeComponent {
@@ -165,11 +188,10 @@ export class HomeComponent {
     }
   }
   private addSlide() {
-    let newWidth = 600 + this.slides.length + 1;
+    let imageNum = this.slides.length + 1;
     this.slides.push({
-      image: `//placekitten.com/${newWidth}/300`,
-      text: `${['More', 'Extra', 'Lots of', 'Surplus'][this.slides.length % 4]}
-      ${['Cats', 'Kittys', 'Felines', 'Cutes'][this.slides.length % 4]}`
+      image: `./images/homepage/首页图片${imageNum}.jpg`,
+      text: ``
     });
   }
 
