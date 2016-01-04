@@ -22,7 +22,7 @@ import {Hero} from './hero';
         </div>
       </div>
       <div class="right">
-        <a [routerLink]="['Lesson']">查看更多》</a>
+        <a [routerLink]="['Lesson']">查看更多>></a>
         <img src="./images/home-lesson.png"/>
       </div>
     </div>
@@ -101,6 +101,7 @@ import {Hero} from './hero';
       position: absolute;
       top: 8px;
       right: 10px;
+      color: #000;
     }
     #content .right img {
       margin-top: 10px;
